@@ -1,0 +1,132 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 3rem;
+    padding: 6rem;
+    
+    & .article-box {
+        border-radius: 30px;
+        height: 50rem;
+        background-color: rgb(221, 221, 221);
+        border: 2px solid rgb(192, 192, 192);
+        overflow: hidden;
+        text-decoration: none;
+        transition: 0.5s;
+        & .photo-box{
+            height: 50%;
+            overflow: hidden;
+            border-radius: 30px;
+            text-align: center;
+    
+            & img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+                transition: all 1.2s;
+
+            }
+
+            & img:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        & .title-box {
+            color: black;
+            margin-top: 1rem;
+            padding: 0 2rem;
+            font-size: 3rem;
+            font-weight: 700;
+            height: 35%;
+        }
+
+        & .details-box {
+            @include clearfix();
+            padding: 0 2rem;
+            padding-bottom: 2rem;
+            color: black;
+            & .date {
+                float: left;
+            }
+
+            & .categorie {
+                float: right;
+                border: 2px solid black;
+                border-radius: 2rem;
+                padding:2px 8px;
+            }
+        }
+
+    }
+
+    & .article-box:hover {
+        background-color: rgb(192, 192, 192);
+    }
+}
+
+.footer {
+    height: 35rem;
+    width: 100%;
+    background-color: $color-primary-red-dark;
+    color: white;
+    position: relative;
+    @include clearfix;
+
+    & .contact {
+        float: left;
+        margin-left: 25rem;
+        padding-top: 5rem;
+        font-size: 1.5rem;
+
+        & p {
+            margin-bottom: 2rem;
+        }
+
+        & ion-icon{
+            font-size: 4rem;
+            color: white;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            transition: all 0.5s;
+
+            &:hover {
+                color: grey;
+            } 
+        }
+    }
+
+    & .creator {
+        font-size: 1.5rem;
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        & ion-icon{
+            color: red;
+        }
+
+        & a {
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 3rem;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: grey;
+                color: black;
+            }
+        }
+    }
+
+    & .copyright {
+        width: 50rem;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 30rem
+    }
+}

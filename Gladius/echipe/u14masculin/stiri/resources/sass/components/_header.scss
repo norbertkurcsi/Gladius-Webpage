@@ -1,0 +1,10 @@
+header {
+    margin-top: 7rem;
+    // background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0, 0, 0, 0.801));
+    background-color: black;
+    padding: 0;
+    & img{
+        width: 100%;
+        opacity: 0.7;
+    }
+}

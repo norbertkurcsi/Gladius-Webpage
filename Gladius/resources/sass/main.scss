@@ -1,0 +1,13 @@
+@import "abstracts/variables";
+@import "abstracts/mixins"; 
+
+@import "base/base";
+@import "base/typography";
+@import "base/animations";
+
+@import "components/navigation";
+@import "components/header";
+@import "components/grid";
+@import "components/trophies";
+
+@import "queries/header-querie"

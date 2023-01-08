@@ -1,0 +1,156 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato',sans-serif;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+    min-height: max-content;
+    @include clearfix();
+
+    & .photo {
+        width:30%;
+        height: 100%;
+        float: left;
+        position: fixed;
+        background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)),url(../img/photo.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    & .admin {
+        width: 70%;
+        background-color: #c62828;
+        height: 100%;
+        float: right;
+
+        & .bar {
+            width: 100%;
+            height: 100px;
+            background-color: #811313;
+            border-bottom: 3px solid black;
+            @include clearfix();
+            
+
+            & img {
+                float: left;
+                width: 80px;
+                border-radius: 100px;
+                margin-left: 30px;
+                margin-top: 10px;
+            }
+
+            & .logout {
+                float:right;
+                margin-right: 20px;
+                margin-top: 25px;
+                padding: 15px 20px;
+                background-color: gray;
+                text-decoration: none;
+                color: black;
+                border-radius: 20px;
+                transition: all 0.5s;
+            }
+
+            & .logout:hover {
+                color: white;
+                background-color: #c62828;
+            }
+
+            & .user {
+                float: right;
+                margin-right: 20px;
+                margin-top: 25px;
+                padding: 15px 20px;
+                color: white;
+                font-size: 20px;
+            }
+        }
+
+        & form {
+            box-sizing: border-box;
+            padding-left: 30px;
+            & hr {
+                margin: 30px auto;
+                width: 500px;
+                height: 2px;
+                border: none;
+                background-color: black;
+            }
+    
+    
+            & label {
+                display: inline-block;
+                color: white;
+                font-size: 20px;
+                font-weight: 300;
+            }
+    
+            input {
+                margin-left: 5px;
+                padding:7px 15px;
+                border-radius: 10px;
+                border: 2px solid black;
+            }
+    
+            input[type=submit] {
+                margin-left: 5px;
+                padding:7px 15px;
+                border-radius: 10px;
+                border: 2px solid black;
+                background-color: gray;
+                transition: all 0.5s;
+                cursor: pointer;
+            }
+    
+            input[type=submit]:hover{
+                background-color: rgb(1, 185, 1);
+            }
+    
+            .message1 {
+                display: inline-block;
+                color: white;
+                font-size: 20px;
+                margin-left: 20px;
+            }
+    
+            textarea {
+                display: block;
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+    
+            input[type=file]{
+                border-radius: 20px;
+                background-color: gray;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+    
+            br {
+                height: 20px;
+            }
+    
+            input[name=g2]{
+                margin-left: 60px;
+                margin-top: 20px;
+            }
+    
+            select[name=cat]{
+                padding: 7px 15px;
+                border: 2px solid black;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+

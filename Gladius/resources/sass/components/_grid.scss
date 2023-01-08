@@ -1,0 +1,94 @@
+.ultimele-stiri {
+    background-color: rgb(235, 235, 235);
+
+    & h1 {
+        display: block;
+        width: 40rem;
+        margin: 0 auto;
+        font-size: 5rem;
+        padding-top: 2rem;
+    }
+
+    & .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        grid-gap: 3rem;
+        padding: 4rem 6rem;
+        
+        & .link {
+            position: relative;
+            & .article-box {
+                border-radius: 30px;
+                display: block;
+                height: 60rem;
+                background-color: rgb(221, 221, 221);
+                border: 2px solid rgb(192, 192, 192);
+                overflow: hidden;
+                text-decoration: none;
+                transition: 0.5s;
+                cursor: pointer;
+                & .photo-box{
+                    height: 50%;
+                    overflow: hidden;
+                    border-radius: 30px;
+                    text-align: center;
+            
+                    & img {
+                        object-fit: cover;
+                        object-position: center;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 1.2s;
+        
+                    }
+        
+                    & img:hover {
+                        transform: scale(1.2);
+                    }
+                }
+        
+                & .title-box {
+                    color: black;
+                    margin-top: 1rem;
+                    padding: 0 2rem;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    height: 35%;
+                }
+        
+                & .details-box {
+                    @include clearfix();
+                    padding: 0 2rem;
+                    padding-bottom: 2rem;
+                    color: black;
+                    & .date {
+                        float: left;
+                    }
+                }
+        
+            }
+        
+            & .article-box:hover {
+                background-color: rgb(192, 192, 192);
+            }
+        }
+
+        & .categorie {
+            position: absolute;
+            right: 2rem;
+            bottom: 4rem;
+            border: 2px solid black;
+            border-radius: 2rem;
+            padding:2px 8px;
+            transition: all 0.5s;
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                background-color: $color-primary-red;
+                color: white;
+            }
+        }
+    }
+    
+}

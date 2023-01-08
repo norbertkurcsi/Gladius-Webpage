@@ -1,0 +1,101 @@
+.social-links {
+    background-color: $color-primary-red;
+    @include clearfix;
+    
+    &__social-media {
+        float: right;
+        list-style: none;
+        
+        & li {
+            display: inline-block;
+            margin-right: 3rem;
+            margin-top: 0.6rem;
+
+            &:last-child{
+                margin-right: 5rem;
+            }
+
+
+            & a:link,
+            & a:visited {
+                text-decoration: none;
+                font-size: 2.5rem;
+                transition: all 0.2s;
+                color: $color-grey-dark;
+            }
+
+            & a:hover,
+            & a:active {
+                color: white;
+            }
+        }
+
+    }
+}
+
+.menu {
+    background-image: linear-gradient($color-primary-red-dark,$color-primary-red);
+    height: 7rem;
+    @include clearfix;
+    & .logo-box {
+        width: 15%;
+        float: left;
+        position: relative;
+        margin-top: -70px;
+        margin-left: 2%;
+        &__logo {
+            width: 18rem;
+            border-radius: 10rem;
+            border: black ;
+        }
+    }
+
+    & .nav-box {
+        letter-spacing: 0.3rem;
+        float:left;
+        width: 80%;
+        text-align: center;
+        & .main-nav {
+            list-style: none;
+            
+    
+            & li{
+                display: inline-block;
+                margin-top: 1.9rem;
+                margin-right: 10%;
+    
+                & a:link,
+                & a:visited {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 2rem;
+                    color: white;
+                    padding-bottom: 8px;
+                    transition: border-bottom 0.1s;
+                }
+
+                & a:hover,
+                & a:active {
+                    border-bottom: 3px solid white;
+                }
+
+                &:nth-child(4){
+                    border-bottom: 3px solid white;
+                }
+            }
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    & .logo-box__logo {
+        width: 14rem;
+        margin-top: 4.5rem;
+    }
+}

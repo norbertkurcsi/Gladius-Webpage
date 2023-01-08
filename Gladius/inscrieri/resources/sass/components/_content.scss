@@ -1,0 +1,175 @@
+body {
+    padding-top: 19rem;
+    background-image: linear-gradient(grey,$color-primary-red,$color-primary-red-dark,);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.form {
+    width: 100rem;
+    background-color: rgba(114, 114, 114, 0.61);
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 3rem;
+    margin-bottom: 10rem;
+    @include clearfix;
+    h2 {
+        width:46rem;
+        margin:0 auto;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px white;
+    }
+
+    label {
+        font-size: 2.5rem;
+        margin-left: 17rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+
+    input[type=submit]{
+        display: block;
+        margin: 0 auto;
+        margin-top: 3rem;
+        background-color: $color-primary-red;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+        font-size: 2rem;
+        border: 2px solid black;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $color-primary-red-dark;
+            color: white;
+        }
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    input[type=number]{
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        border: 1.5px solid black;
+        font-size: 1.5rem;
+        float: right;
+        margin-right: 17rem;
+        width: 25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    select {
+        width: 25rem;
+        float: right;
+        margin-right: 17rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        border: 1.5px solid black;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 2.3rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+  
+}
+
+.sponsors {
+    background-color: white;
+    height: 46rem;
+
+    & h1 {
+        display: block;
+        width: 21rem;
+        font-size: 5rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    & .content {
+        height: 100%;
+        @include clearfix;
+        
+        & a{
+            float: left;
+            text-decoration: none;
+            width: 20%;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer {
+    height: 35rem;
+    width: 100%;
+    background-color: $color-primary-red-dark;
+    color: white;
+    position: relative;
+    @include clearfix;
+
+    & .contact {
+        float: left;
+        margin-left: 25rem;
+        padding-top: 5rem;
+        font-size: 1.5rem;
+
+        & p {
+            margin-bottom: 2rem;
+        }
+
+        & ion-icon{
+            font-size: 4rem;
+            color: white;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            transition: all 0.5s;
+
+            &:hover {
+                color: grey;
+            } 
+        }
+    }
+
+    & .creator {
+        font-size: 1.5rem;
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        & ion-icon{
+            color: red;
+        }
+
+        & a {
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 3rem;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: grey;
+                color: black;
+            }
+        }
+    }
+
+    & .copyright {
+        width: 50rem;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 30rem
+    }
+}

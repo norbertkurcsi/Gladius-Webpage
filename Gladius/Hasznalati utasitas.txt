@@ -1,0 +1,4 @@
+A Database mappaban talalhato egy SQL file, ezt kell importalni az XAMPP-ba. Fontos hogy az adatbazist "gladius_database"
+neven importaljuk, maskepp a program nem lesz mukodokepes.
+
+A mappat mindenestol, a htdocs-be kell betenni, majd a bongeszobe "localhost/Gladius" cimet kell beirni.
